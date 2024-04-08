@@ -28,6 +28,9 @@ namespace archivos_JSON
             int nota = Convert.ToInt16(textBox2.Text);
 
             notasTemporales.Add(nota);
+            MessageBox.Show("Nota guardada");
+            textBox2.Text = "";
+
 
 
         }
@@ -53,8 +56,15 @@ namespace archivos_JSON
             listaNotas.Add(notasAlumno);
 
             Grabar();
+            MessageBox.Show("Datos Guardados");
             notasTemporales.Clear();
-            
+            textBox1.Text = "";
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
